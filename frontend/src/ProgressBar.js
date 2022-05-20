@@ -19,7 +19,6 @@ function ProgressBar() {
 
     source.addEventListener('verification', (event) => {
       const data =  JSON.parse(event.data);
-      console.log(`data ${data}`);
       setVerificationProgress(data);
 
       //if(data === 100) {
