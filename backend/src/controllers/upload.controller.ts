@@ -54,7 +54,9 @@ export const upoadResponse = (req: Request, res: Response) => {
   // console.log("uploaded file", req.file);
 
   if (res.statusCode === 200) {
-    axios.get("http://localhost:5000/api/verify/phone-numbers");
+    axios.get(
+      `http://localhost:5000/api/verify/phone-numbers/${req.file?.originalname}`
+    );
   }
   res.status(200).json({
     status: "success",
